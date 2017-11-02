@@ -13,6 +13,7 @@ Router.map(function () {
   this.route('jobs');
   this.route('jobs-new', {path: 'jobs/new'});
   this.route('jobs-edit', {path: 'jobs/:job_id/edit'});
+  this.route('job', {path: 'jobs/:job_id'});
 });
 
 export default Router;
