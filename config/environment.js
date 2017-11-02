@@ -51,7 +51,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/job-seeker'
     ENV.locationType = 'hash';
-    ENV.apiHost = 'job-seeker-api.herokuapp.com'
+    ENV.apiHost = 'https://job-seeker-api.herokuapp.com'
   }
 
   return ENV;
