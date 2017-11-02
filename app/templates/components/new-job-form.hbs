@@ -1,0 +1,10 @@
+{{input placeholder='New Job Company' value=newJob.company}}
+{{input placeholder='New Job Title' value=newJob.title}}
+{{input placeholder='New Job URL' value=newJob.url}}
+<button type="submit" class="btn btn-primary" {{action "submit"}}>
+  Save
+</button>
+
+<button class="btn btn-default" {{action "reset"}}>
+  Cancel
+</button>
