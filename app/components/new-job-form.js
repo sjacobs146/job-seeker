@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     company: null,
     title: null,
     url: null,
-    status: null,
+    status: 'new',
     dateApplied: null,
     recruiterName: null,
     recruiterEmail: null,
