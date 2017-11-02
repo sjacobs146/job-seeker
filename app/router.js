@@ -11,6 +11,7 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('jobs');
+  this.route('jobs-new', {path: 'jobs/new'});
 });
 
 export default Router;
