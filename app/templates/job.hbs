@@ -2,6 +2,10 @@
 
 <h3 class="list-header">{{model.company}}</h3>
 <h4 class="list-header">{{model.title}}</h4 >
+
+{{#link-to "jobs-edit" model class='btn btn-primary'}} Update {{/link-to}}
+
+<p>ID:  {{model.id}}</p>
 <p>URL:  {{model.url}}</p>
 <p>Status:  {{model.status}}</p>
 <p>Date Applied: {{model.dateApplied}}</p>
