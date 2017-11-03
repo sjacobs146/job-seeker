@@ -1,7 +1,7 @@
-{{input type='text' placeholder='New Job Company' value=newJob.company}}
-{{input type='text' placeholder='New Job Title' value=newJob.title}}
-{{input type='text' placeholder='New Job URL' value=newJob.url}}
-<select onchange={{action (mut newJob.status) value='target.value'}}>
+{{input type='text' placeholder='New Job Company' value=job.company}}
+{{input type='text' placeholder='New Job Title' value=job.title}}
+{{input type='text' placeholder='New Job URL' value=job.url}}
+<select onchange={{action (mut job.status) value='target.value'}}>
     <option value="new">New</option>
     <option value="applied">Applied</option>
     <option value="inprogress">In Progress</option>
@@ -9,8 +9,8 @@
     <option value="offer">Offer Made</option>
     <option value="rejected">Rejected</option>
 </select>
-{{input placeholder='Date Applied' value=newJob.dateApplied}}
-{{input type='text' placeholder='Recruiter Name' value=newJob.recruiterName}}
-{{input type='text' placeholder='Recruiter Email' value=newJob.recruiterEmail}}
-{{input type='text' placeholder='Recruiter Phone' value=newJob.recruiterPhone}}
-{{textarea cols=80 rows=6 placeholder='Notes' value=newJob.notes}}
+{{input type='date' placeholder='Date Applied' value=job.dateApplied}}
+{{input type='text' placeholder='Recruiter Name' value=job.recruiterName}}
+{{input type='text' placeholder='Recruiter Email' value=job.recruiterEmail}}
+{{input type='text' placeholder='Recruiter Phone' value=job.recruiterPhone}}
+{{textarea cols=80 rows=6 placeholder='Notes' value=job.notes}}

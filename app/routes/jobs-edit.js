@@ -1,5 +1,31 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-
+  model (params) {
+    return this.get('store').findRecord('job', params.job_id)
+  },
+  actions: {
+    updateJob (job) {
+      let newJob = this.get('store').findRecord('job', job.id)
+        .then(function (data) {
+          data.set('company', job.company)
+          data.set('title', job.title)
+          data.set('url', job.url)
+          data.set('status', job.status)
+          data.set('recruiterName', job.recruiterName)
+          data.set('recruiterEmail', job.recruiterEmail)
+          data.set('recruiterPhone', job.recruiterPhone)
+          data.set('notes', job.notes)
+          data.save()
+        })
+        .then(() => {
+          this.get('flashMessages')
+          .success('Successfully updated your job!');
+        })
+        .catch(() => {
+          this.get('flashMessages')
+          .success('Error updating your job!');
+        })
+    }
+  }
 });
