@@ -1,6 +1,7 @@
 <h2>Here are your Job Opportunities</h2>
+<h3>Click on the job listing to view the details</h3>
 
-<ul>
+<ul class="list-unstyled">
 {{#each model as |job|}}
   <li>{{#link-to 'job' job}}{{job.company}} {{job.title}}{{/link-to}} <button {{action 'deleteJob' job}}>Delete</button></li>
 {{/each}}

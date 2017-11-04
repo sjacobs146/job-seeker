@@ -29,6 +29,9 @@ export default Ember.Route.extend({
           this.get('flashMessages')
           .success('Error updating your job!');
         })
+    },
+    cancel (job) {
+      this.transitionTo('job', job)
     }
   }
 });

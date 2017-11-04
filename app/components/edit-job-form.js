@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: 'form',
   classNames: ['form-horizontal'],
-  newJob: {},
+
   actions: {
     updateJob () {
       const updatedJob = {
@@ -19,6 +19,9 @@ export default Ember.Component.extend({
         notes: this.get('job.notes'),
       }
       this.sendAction('updateJob', updatedJob)
+    },
+    cancel () {
+      this.sendAction('cancel')
     }
   }
 });
