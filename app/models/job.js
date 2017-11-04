@@ -4,7 +4,7 @@ export default DS.Model.extend({
   company: DS.attr('string'),
   title: DS.attr('string'),
   url: DS.attr('string'),
-  dateApplied: DS.attr('date'),
+  dateApplied: DS.attr('string'),
   status: DS.attr('string'),
   recruiterName: DS.attr('string'),
   recruiterEmail: DS.attr('string'),
