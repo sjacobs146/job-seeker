@@ -1,16 +1,18 @@
-{{input type='text' placeholder='New Job Company' value=job.company}}
-{{input type='text' placeholder='New Job Title' value=job.title}}
-{{input type='text' placeholder='New Job URL' value=job.url}}
-<select onchange={{action (mut job.status) value='target.value'}}>
-    <option value="new">New</option>
-    <option value="applied">Applied</option>
-    <option value="inprogress">In Progress</option>
-    <option value="noresponse">No Response</option>
-    <option value="offer">Offer Made</option>
-    <option value="rejected">Rejected</option>
+{{text-input id='company' value=job.company placeholder='New Job Company' label='Company'}}
+{{text-input id='title' value=job.title placeholder='New Job Title' label='Title'}}
+{{text-input id='url' value=job.url placeholder='New Job URL' label='URL' }}
+<select class='form-control' onchange={{action (mut job.status) value='target.value'}} value=job.status>
+  {{#each statusList as |status|}}
+    <option value=status.value>{{status.text}}</option>
+  {{/each}}
 </select>
-{{input type='date' placeholder='Date Applied' value=job.dateApplied}}
-{{input type='text' placeholder='Recruiter Name' value=job.recruiterName}}
-{{input type='text' placeholder='Recruiter Email' value=job.recruiterEmail}}
-{{input type='text' placeholder='Recruiter Phone' value=job.recruiterPhone}}
-{{textarea cols=80 rows=6 placeholder='Notes' value=job.notes}}
+{{!-- {{#x-select value=job.status action=(action (mut job.status) value='target.value') as |xs|}}
+  {{#xs.option value='new'}}New{{/xs.option}}
+  {{#xs.option value='applied'}}Applied{{/xs.option}}
+  {{#xs.option value='inprogress'}}In Progress{{/xs.option}}
+{{/x-select}} --}}
+{{input type='date' class='form-control' placeholder='Date Applied' value=job.dateApplied}}
+{{text-input id='recruiterName' value=job.recruiterName placeholder='Recruiter Name' label='Recruiter Name' }}
+{{text-input id='recruiterEmail' placeholder='Recruiter Email' value=job.recruiterEmail label='Recruiter Email'}}
+{{text-input id=RecruiterPhone placeholder='Recruiter Phone' value=job.recruiterPhone label='Recruiter Phone'}}
+{{textarea class='form-control' cols=80 rows=6 resize=none placeholder='Notes' value=job.notes}}
