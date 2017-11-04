@@ -15,3 +15,7 @@
 // .container-fluid {
 //   background-color: #FFDFB0;
 // }
+
+textarea {
+  resize: none; /* user can resize vertically, but width is fixed */
+}
