@@ -1,7 +1,7 @@
 {
   "name": "job-seeker",
   "version": "0.0.0",
-  "description": "ember auth training",
+  "description": "Job seeker Application",
   "private": true,
   "directories": {
     "doc": "doc",
