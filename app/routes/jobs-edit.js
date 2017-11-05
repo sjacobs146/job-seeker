@@ -19,15 +19,15 @@ export default Ember.Route.extend({
           data.set('recruiterPhone', job.recruiterPhone)
           data.set('notes', job.notes)
           data.save()
-        })
-        .then(() => {
-          this.get('flashMessages')
-          .success('Successfully updated your job!');
-        })
-        .then(() => this.transitionTo('job', job))
-        .catch(() => {
-          this.get('flashMessages')
-          .success('Error updating your job!');
+          .then( function () {
+            this.get('flashMessages')
+            .success('Successfully updated your job!');
+          })
+          .then(() => this.transitionTo('job', job))
+          .catch(function () {
+            this.get('flashMessages')
+            .error('Error updating your job!');
+          })
         })
     },
     cancel (job) {
