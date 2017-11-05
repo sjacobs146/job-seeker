@@ -7,6 +7,7 @@ export default Ember.Route.extend({
   },
   actions: {
     updateJob (job) {
+      // const flashMessages = Ember.get(this, 'flashMessages');
       let newJob = this.get('store').findRecord('job', job.id)
         .then(function (data) {
           data.set('company', job.company)
@@ -18,15 +19,14 @@ export default Ember.Route.extend({
           data.set('recruiterEmail', job.recruiterEmail)
           data.set('recruiterPhone', job.recruiterPhone)
           data.set('notes', job.notes)
-          // TODO: handle failed save
-          data.save()
+          return data.save()
         })
         .then(() => {
           this.get('flashMessages').success('Successfully updated your job!')
         })
         .then(() => this.transitionTo('job', job))
         .catch(() => {
-          this.get('flashMessages').error('Error updating your job!')
+          this.get('flashMessages').danger('Error updating your job!')
         })
     },
     cancel (job) {
