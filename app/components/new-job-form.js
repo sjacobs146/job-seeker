@@ -18,7 +18,6 @@ export default Ember.Component.extend({
 
   actions: {
     submit () {
-      console.log('submit')
       this.sendAction('submit', this.get('newJob'));
       this.set('newJob.company', null)
       this.set('newJob.title', null)
@@ -26,7 +25,6 @@ export default Ember.Component.extend({
     },
 
     reset () {
-      console.log('cancel')
       this.set('newJob', {});
     },
   },

@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   actions: {
     createJob(job) {
-      console.log('createJob')
       let newJob = this.get('store').createRecord('job', job)
       newJob.save()
       .then(() => this.transitionTo('jobs'))

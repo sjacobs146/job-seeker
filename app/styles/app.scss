@@ -1,2 +1,21 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+
+// body {
+//   background-image: url('https://i.imgur.com/d8FIn7d.jpg');
+//   background-position: center center;
+//   background-repeat:   no-repeat;
+//   background-size:     cover;
+// }
+// .main-container {
+//   background-color: #FFDFB0;
+//   padding: 10px;
+// }
+//
+// .container-fluid {
+//   background-color: #FFDFB0;
+// }
+
+textarea {
+  resize: none; /* user can resize vertically, but width is fixed */
+}
