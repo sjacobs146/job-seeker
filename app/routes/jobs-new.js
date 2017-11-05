@@ -14,6 +14,9 @@ export default Ember.Route.extend({
         this.get('flashMessages')
         .danger('There was a problem creating your job. Please try again.');
       })
+    },
+    cancel () {
+      this.transitionTo('jobs')
     }
   }
 });
