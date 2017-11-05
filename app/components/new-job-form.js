@@ -1,9 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: 'form',
-  classNames: ['form-horizontal'],
-
   newJob: {
     company: null,
     title: null,
@@ -25,7 +22,9 @@ export default Ember.Component.extend({
     },
 
     reset () {
-      this.set('newJob', {});
+      this.set('newJob', {})
+      this.sendAction('reset')
+
     },
   },
 });
