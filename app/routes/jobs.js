@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  classNameBindings: ['table-responsive'],
   actions: {
     deleteJob(job) {
       job.destroyRecord()
