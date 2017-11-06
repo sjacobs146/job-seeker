@@ -1,15 +1,43 @@
-<h2>This is a job</h2>
+<h3>Job Opportunity Details</h3>
 
-<h3 class="list-header">{{model.company}}</h3>
-<h4 class="list-header">{{model.title}}</h4 >
-
-{{#link-to "jobs-edit" model class='btn btn-primary'}} Update {{/link-to}}
-
-<p>ID:  {{model.id}}</p>
-<p>URL:  {{model.url}}</p>
-<p>Status:  {{model.status}}</p>
-<p>Date Applied: {{model.dateApplied}}</p>
-<p>Recruiter Name:  {{model.recruiterName}}</p>
-<p>Recruiter Email:  {{model.recruiterEmail}}</p>
-<p>Recruiter Phone:  {{model.recruiterPhone}}</p>
-<p>Notes:  {{model.notes}}</p>
+<div class="card w-75">
+  <div class="card-block">
+    <h3 class="card-title">{{model.company}}</h3>
+    <h4 class="card-subtitle mb-2 text-muted">{{model.title}}</h4>
+    <div class="container">
+      <div class="row">
+      </div>
+      <div class="row">
+        <div class="col-sm-2"><strong>URL</strong></div>
+        <div class="col-sm-10">{{model.url}}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2"><strong>Status</strong></div>
+        <div class="col-sm-10">{{model.status}}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2"><strong>Date Applied</strong></div>
+        <div class="col-sm-10">{{model.dateApplied}}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2"><strong>Recruiter Name</strong></div>
+        <div class="col-sm-10">{{model.recruiterName}}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2"><strong>Recruiter Email</strong></div>
+        <div class="col-sm-10">{{model.recruiterEmail}}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2"><strong>Recruiter Phone</strong></div>
+        <div class="col-sm-10">{{model.recruiterPhone}}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"></div>
+      </div>
+    </div>
+    <div class="card-text">
+      {{model.notes}}
+    </div>
+    {{#link-to "jobs-edit" model class='btn btn-primary'}} Update {{/link-to}}
+  </div>
+</div>

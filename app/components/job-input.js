@@ -5,11 +5,11 @@ export default Ember.Component.extend({
   classNames: ['form-group'],
 
   statusList: [
-    {value: 'new', text: 'New'},
-    {value: 'applied', text: 'Applied'},
-    {value: 'inprogress', text: 'In Progress'},
-    {value: 'noresponse', text: 'No Response'},
-    {value: 'offer', text: 'Offer Made'},
-    {value: 'rejected', text: 'Rejected'},
+    {value: 'New', text: 'New'},
+    {value: 'Applied', text: 'Applied'},
+    {value: 'In Progress', text: 'In Progress'},
+    {value: 'No Response', text: 'No Response'},
+    {value: 'Offer Made', text: 'Offer Made'},
+    {value: 'Rejected', text: 'Rejected'},
   ]
 });
