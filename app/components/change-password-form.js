@@ -5,7 +5,10 @@ export default Ember.Component.extend({
   classNames: ['form-horizontal'],
 
   passwords: {},
-
+  init() {
+      this._super(...arguments);
+      this.set('passwords', {});
+    },
   actions: {
     submit () {
       this.sendAction('submit', this.get('passwords'));
