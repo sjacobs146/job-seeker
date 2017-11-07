@@ -48,8 +48,11 @@ components as well.
 # Ember Design
 ## Routes
 jobs
+
 jobs-new {path: 'jobs/new'}
+
 job {path: 'jobs/:job_id}
+
 jobs-edit {path: 'jobs/:job_id/edit}
 
 ## Components
