@@ -97,5 +97,5 @@ phone, in-person, etc.
 logged in or not.
 
 # A Message for my Colleagues
-Best of luck with your future career!
+Best of luck with your future careers!
 ![Can I haz this job?](/docs/jobcat.jpg)
