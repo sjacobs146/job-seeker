@@ -9,14 +9,24 @@ a Ruby-on-Rails server
 API URL:  https://job-seeker-api.herokuapp.com
 
 # Technologies Used
+- Ember
 - HTML5
 - CSS
 - JavaScript
-- Ember
 - Bootstrap
 - Handlebars
 
 # My Planning process
+## Ideation
+Since this is my capstone project, I wanted a really impressive and unique concept for an
+application that would catch employers' eyes. I struggled with it for a while
+until one day when I created a Google spreadsheet to track my job search
+efforts. I was once told that anytime you use a spreadsheet for something other
+than calculations or reporting of some sort, it's
+an indication that an application should be written to do that work instead. Hence
+Job Seeker.
+
+## Design and Planning
 I began my planning by reading the project requirements, and creating wireframes.
 Then I created some user stories, and an [agile board](https://trello.com/b/7amUjo1E/capstone-project) to represent the tasks that needed to be accomplished. Once I decided to use Ember, I planned out my routes and
 components as well.
@@ -68,11 +78,24 @@ way I wanted it to, I moved on to refactoring create.
 Refactoring Create really brought home the power of Components to me. It
 took me literally 5 minutes to take out my old form, and drop in the job-input
 component. It just worked, and going forward, any changes that I needed to make
-to the component immediately applied to Update and Create.  While I was working
+to the component immediately applied to both Update and Create.  While I was working
 on Update, I created another component that I didn't initially plan on. When
 I was formatting the text input fields, I started to copy/paste the divs
 with the classes I needed on each input field. Right away I realized that I
 could create a text-input component which made my job-input template much
 simpler and easier to read.
 
+# Additional Features and Improvements Planned
+- Add search functionality so the user can narrow down the job listing by
+Company, Status, Title, etc.
+- Add tracking for interviews. A job opportunity could have multiple interviews,
+phone, in-person, etc.
+- Import job listings from 3rd party APIs such as Glassdoor, LinkedIn, etc.
+- I'd like to implement validators to validate the form input.
+- I want to refactor my Status dropdown to use the emberx-select addon
+- I want my index page to display different content depending on whether you're
+logged in or not.
+
 # A Message for my Colleagues
+Best of luck with your future career!
+![Can I haz this job?](/docs/jobcat.jpg)
