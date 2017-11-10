@@ -8,6 +8,11 @@ a Ruby-on-Rails server
 
 API URL:  https://job-seeker-api.herokuapp.com
 
+GitHub repo for RoR API: https://github.com/sjacobs146/job-seeker-api
+
+# Screenshot
+![Job Seeker Screenshot](/docs/JobSeekerScreenshot.png)
+
 # Technologies Used
 - Ember
 - HTML5

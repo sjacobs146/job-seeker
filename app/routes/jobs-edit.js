@@ -7,7 +7,6 @@ export default Ember.Route.extend({
   },
   actions: {
     updateJob (job) {
-      // const flashMessages = Ember.get(this, 'flashMessages');
       let newJob = this.get('store').findRecord('job', job.id)
         .then(function (data) {
           data.set('company', job.company)
@@ -29,8 +28,15 @@ export default Ember.Route.extend({
           this.get('flashMessages').danger('Error updating your job!')
         })
     },
-    cancel (job) {
-      this.transitionTo('job', job)
+    cancel (jobId) {
+      let job = this.get('store').findRecord('job', jobId)
+        .then(function (data) {
+          return data.rollbackAttributes()
+        })
+        .then(() => this.transitionTo('job', jobId))
+        .catch(()=> {
+          this.get('flashMessages').danger('Error on cancel')
+        })
     }
   }
 });

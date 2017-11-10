@@ -5,14 +5,17 @@ export default Ember.Component.extend({
     company: null,
     title: null,
     url: null,
-    status: 'new',
+    status: 'New',
     dateApplied: null,
     recruiterName: null,
     recruiterEmail: null,
     recruiterPhone: null,
     notes: null
   },
-
+  init() {
+      this._super(...arguments);
+      this.set('newJob', {});
+    },
   actions: {
     submit () {
       this.sendAction('submit', this.get('newJob'));
