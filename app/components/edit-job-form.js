@@ -16,9 +16,10 @@ export default Ember.Component.extend({
         notes: this.get('job.notes'),
       }
       this.sendAction('updateJob', updatedJob)
+      return
     },
     cancel () {
-      this.sendAction('cancel')
+      this.sendAction('cancel', this.get('job.id'))
     }
   }
 });
