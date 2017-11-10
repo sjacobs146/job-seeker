@@ -12,7 +12,10 @@ export default Ember.Component.extend({
     recruiterPhone: null,
     notes: null
   },
-
+  init() {
+      this._super(...arguments);
+      this.set('newJob', {});
+    },
   actions: {
     submit () {
       this.sendAction('submit', this.get('newJob'));
