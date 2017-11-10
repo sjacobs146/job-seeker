@@ -14,7 +14,7 @@ export default Ember.Component.extend({
   },
   init() {
       this._super(...arguments);
-      this.set('newJob', {});
+      this.set('newJob', {status: 'New'});
     },
   actions: {
     submit () {
