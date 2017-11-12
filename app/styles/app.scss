@@ -9,14 +9,24 @@
     height: 100%;
     background-image: url('https://i.imgur.com/GIDeuS2.jpg');
     background-repeat: no-repeat;
+    background-position: center;
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: cover;
     opacity: 0.5;
     z-index: -1
 }
 
 .card-block {
   margin-bottom: 15px;
+}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.container-fluid .navbar-brand {
+  margin-left: 15px;
 }
 
 .form-horizontal .form-group {
@@ -34,4 +44,10 @@
 
 textarea {
   resize: none; /* user can resize vertically, but width is fixed */
+}
+
+@media (min-width: 768px) {
+  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+      margin-left: 0px;
+  }
 }
