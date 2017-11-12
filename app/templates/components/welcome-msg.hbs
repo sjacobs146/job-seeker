@@ -1,0 +1,27 @@
+{{#if isAuthenticated}}
+    <h2> Hello {{user}}!</h2>
+    <p>
+      Click 'Jobs' to see your current list of job opportunities. From there
+      you can view the details, delete or update job opportunity information.
+    </p>
+    <p>
+      Click 'Create Job' to enter a new job opportunity.
+    </p>
+{{else}}
+    <p>
+      If you’re in active job search mode, you know that staying on top of
+      all the job postings and follow-up tasks is not easy. If you
+      don’t keep all those job opportunities organized, you're likely
+      to slip up and slow down your progress.
+    </p>
+    <p>Help is here.</p>
+    <p>
+      Click Sign Up for a free trial. No credit card required, you don't even
+      need to provide a real email address (in fact, we recommend that you
+      don't).
+    </p>
+    <p>
+      If you're already a member, please click on Sign In to begin slaying
+      your job search!
+    </p>
+{{/if}}
