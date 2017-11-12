@@ -1,7 +1,7 @@
 {{text-input id='company' value=job.company required=true placeholder='New Job Company' label='Company'}}
 {{text-input id='title' value=job.title required=true placeholder='New Job Title' label='Title'}}
 {{text-input id='url' value=job.url placeholder='New Job URL' label='URL' }}
-<div class="form-group row">
+<div class="form-group">
   <label for='kind' class="col-sm-2 col-form-label">Status</label>
   <div class="col-sm-10">
     <select class='form-control' onchange={{action (mut job.status) value='target.value'}} value=job.status>
@@ -16,7 +16,7 @@
   {{#xs.option value='applied'}}Applied{{/xs.option}}
   {{#xs.option value='inprogress'}}In Progress{{/xs.option}}
 {{/x-select}} --}}
-<div class="form-group row">
+<div class="form-group">
   <label for='kind' class="col-sm-2 col-form-label">Date Applied</label>
   <div class="col-sm-10">
     {{input type='date' class='form-control' placeholder='Date Applied' value=job.dateApplied}}
@@ -25,7 +25,7 @@
 {{text-input id='recruiterName' value=job.recruiterName placeholder='Recruiter Name' label='Recruiter Name' }}
 {{text-input id='recruiterEmail' placeholder='Recruiter Email' value=job.recruiterEmail label='Recruiter Email'}}
 {{text-input id=RecruiterPhone placeholder='Recruiter Phone' value=job.recruiterPhone label='Recruiter Phone'}}
-<div class="form-group row">
+<div class="form-group">
   <label for='kind' class="col-sm-2 col-form-label">Notes</label>
   <div class="col-sm-10">
     {{textarea class='form-control' cols=80 rows=6 placeholder='Notes' value=job.notes}}
