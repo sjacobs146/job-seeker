@@ -1,10 +1,14 @@
 {{email-input email=credentials.email}}
 {{password-input password=credentials.password}}
 
-<button type="submit" class="btn btn-primary" {{action "submit"}}>
-  Sign In
-</button>
+<div class="form-group row">
+  <div class="offset-sm-2 col-sm-10">
+    <button type="submit" class="btn btn-primary" {{action "submit"}}>
+      Sign In
+    </button>
 
-<button class="btn btn-default" {{action "reset"}}>
-  Cancel
-</button>
+    <button class="btn btn-default" {{action "reset"}}>
+      Cancel
+    </button>
+  </div>
+</div>

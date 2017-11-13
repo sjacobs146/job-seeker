@@ -1,21 +1,23 @@
-<h2>Here are your Job Opportunities</h2>
-<h3>Click on the job listing to view the details</h3>
+<div class="col-md-8 col-md-offset-2 innerbackground">
+  <h2>Here are your Job Opportunities</h2>
+  <h3>Click on the job listing to view the details</h3>
 
-<table class="table table-striped">
-  <thead>
-      <tr>
-        <th>Company</th>
-        <th>Job Title</th>
-        <th> </th>
-      </tr>
-  </thead>
-  <tbody>
-    {{#each model as |job|}}
-      <tr>
-        <td>{{#link-to 'job' job}}{{job.company}}{{/link-to}}</td>
-        <td>{{#link-to 'job' job}}{{job.title}}{{/link-to}} </td>
-        <td><button {{action 'deleteJob' job}}>Delete</button></td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
+  <table class="table table-striped">
+    <thead>
+        <tr>
+          <th>Company</th>
+          <th>Job Title</th>
+          <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+      {{#each model as |job|}}
+        <tr>
+          <td>{{#link-to 'job' job}}{{job.company}}{{/link-to}}</td>
+          <td>{{#link-to 'job' job}}{{job.title}}{{/link-to}} </td>
+          <td><button class='btn btn-danger' {{action 'deleteJob' job}}>Delete</button></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

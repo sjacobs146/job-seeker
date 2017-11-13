@@ -1,21 +1,53 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
-// body {
-//   background-image: url('https://i.imgur.com/d8FIn7d.jpg');
-//   background-position: center center;
-//   background-repeat:   no-repeat;
-//   background-size:     cover;
-// }
-// .main-container {
-//   background-color: #FFDFB0;
-//   padding: 10px;
-// }
-//
-// .container-fluid {
-//   background-color: #FFDFB0;
-// }
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.imgur.com/GIDeuS2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1
+}
+
+.card-block {
+  margin-bottom: 15px;
+}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.container-fluid .navbar-brand {
+  margin-left: 15px;
+}
+
+.form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.innerbackground {
+  background-color: #eeeeee;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
 
 textarea {
   resize: none; /* user can resize vertically, but width is fixed */
+}
+
+@media (min-width: 768px) {
+  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+      margin-left: 0px;
+  }
 }
